@@ -1,7 +1,7 @@
 
 # Movie Recommender System 🎬
 
-[View Movie Recommender System](https://movierecommendersystem-3mwpnnrwcxlph9wavxwhob.streamlit.app/)
+[View Movie Recommender System](https://moviesrecommendersystem-iryvqvheouxgycfhwypkhs.streamlit.app/)
 ## Overview
 
 The Movie Recommender System is a web application built using Streamlit. It recommends movies based on user input using a similarity matrix derived from movie features. The app allows users to select a movie from a dropdown menu and displays a list of recommended movies along with their posters.
@@ -82,7 +82,7 @@ To ensure that the app works properly:
 
 You can configure the app by updating the following variables in the script:
 
-- [Download Similarity Matrix](https://drive.google.com/uc?id=1nRxFIkLs-lfRtUVozJCUAEssNkiigzd8): This link provides the `similarity.pkl` file required by the app.
+- [Download Similarity Matrix](https://drive.google.com/file/d/1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8/view?usp=sharing): This link provides the `similarity.pkl` file required by the app.
 - Update the `api_key` in the `fetch_poster` function with your own TMDB API key if needed to fetch movie posters.
 
 
@@ -90,17 +90,17 @@ You can configure the app by updating the following variables in the script:
 
 You can view the live Movie Recommender System app by clicking on the link below:
 
-[View Movie Recommender System](https://movierecommendersystem-3mwpnnrwcxlph9wavxwhob.streamlit.app/)
+[View Movie Recommender System](https://moviesrecommendersystem-iryvqvheouxgycfhwypkhs.streamlit.app/)
 
 
 ## Contact
 
 For any questions, suggestions, or feedback, please feel free to reach out:
 
-- **Aditya Pathak**
-- **Email:** adityapathak034@gmail.com
-- **GitHub:** [adityapathak0007](https://github.com/adityapathak0007)
-- **LinkedIn:** [adityapathak07](www.linkedin.com/in/adityapathak07)
+- **Atharva Pathak**
+- **Email:** atharvapathak034@gmail.com
+- **GitHub:** https://github.com/atharva0074
+- **LinkedIn:** https://www.linkedin.com/in/atharva034/
 
 
 ### Install Dependencies
