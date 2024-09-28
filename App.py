@@ -72,7 +72,7 @@ st.markdown(
 )
 
 # Download and load similarity matrix
-file_url = "https://drive.google.com/file/d/1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8/view?usp=drive_link"
+file_url = "https://drive.google.com/file/d/1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8/view?usp=sharing"
 download_file(file_url, 'similarity.pkl')
 
 try:
