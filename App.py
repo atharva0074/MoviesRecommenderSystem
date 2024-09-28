@@ -2,6 +2,16 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
+import gdown
+def download_file(url, filename):
+    try:
+       
+        gdown.download(url, filename, quiet=False)
+
+    except Exception as e:
+        st.error(f"Failed to download file: {e}")
+
+
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
     data = requests.get(url)
@@ -28,7 +38,16 @@ def recommend(movie):
 st.title('Movie Recommender System')
 movies_dict = pickle.load (open('movies_dict.pkl','rb'))
 movies=pd.DataFrame(movies_dict)
-similarity = pickle.load (open('similarity.pkl','rb'))
+# Download and load similarity matrix
+file_url = "https://drive.google.com/file/d/1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8/view?usp=drive_link"
+download_file(file_url, 'similarity.pkl')
+
+try:
+    with open('similarity.pkl', 'rb') as file:
+        similarity = pickle.load(file)
+except Exception as e:
+    st.error(f"Error loading pickle file: {e}")
+
 
 selected_movie_name = st.selectbox('How would you like to be contacted',movies['title'].values)
 
