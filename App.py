@@ -34,12 +34,8 @@ def recommend(movie):
         recommended_movies_posters.append(fetch_poster(movie_id))
     return recommended_movies,recommended_movies_posters
 
-
-st.title('Movie Recommender System')
-movies_dict = pickle.load (open('movies_dict.pkl','rb'))
-movies=pd.DataFrame(movies_dict)
 # Download and load similarity matrix
-file_url = "https://drive.google.com/file/d/1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8/view?usp=drive_link"
+file_url = "https://drive.google.com/uc?id=1nRxFIkLs-lfRtUVozJCUAEssNkiigzd8"
 download_file(file_url, 'similarity.pkl')
 
 try:
@@ -47,6 +43,16 @@ try:
         similarity = pickle.load(file)
 except Exception as e:
     st.error(f"Error loading pickle file: {e}")
+
+# Load movie dictionary
+try:
+    with open('movie_dict.pkl', 'rb') as file:
+        movies_dict = pickle.load(file)
+        movies = pd.DataFrame(movies_dict)
+except Exception as e:
+    st.error(f"Error loading movies pickle file: {e}")
+
+st.title('Movie Recommender System')
 
 
 selected_movie_name = st.selectbox('How would you like to be contacted',movies['title'].values)
