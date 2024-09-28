@@ -72,15 +72,14 @@ st.markdown(
 )
 
 # Download and load similarity matrix
-file_url = "https://drive.google.com/file/d/1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8/view?usp=sharing"
+file_url = "https://drive.google.com/uc?id=1617bonCSiYrqK2jQtEM_mgixC_Hkl8k8"  # Direct download link
 download_file(file_url, 'similarity.pkl')
 
 try:
     with open('similarity.pkl', 'rb') as file:
         similarity = pickle.load(file)
 except Exception as e:
-    st.error(f"Error loading pickle file: {e}")
-
+    st.error(f"Error loading pickle file: {e}. Please check if the file is a valid pickle file.")
 # Load movie dictionary
 try:
     with open('movies_dict.pkl', 'rb') as file:
